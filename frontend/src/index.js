@@ -7,7 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Amplify } from "aws-amplify";
 import config from "./config";
+import { initSentry } from "./lib/errorLib";
 
+initSentry();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 Amplify.configure({
